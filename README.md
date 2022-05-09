@@ -1,8 +1,7 @@
 # Pranav Purwar
-<a href="https://blog.pranavpurwar.ga">
-![](https://github.com/PranavPurwar/PranavPurwar/blob/master/generaated/overview.svg)
-![](https://github.com/PranavPurwar/PranavPurwar/blob/master/generated/languages.svg)
-</a>
+
+![Overview](https://github.com/PranavPurwar/PranavPurwar/blob/master/generated/overview.svg)
+![Most Used Languages](https://github.com/PranavPurwar/PranavPurwar/blob/master/generated/languages.svg)
 
 Young 14yo full time programmer.
 
