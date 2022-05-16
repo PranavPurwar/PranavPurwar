@@ -7,6 +7,8 @@ Young 14yo full time programmer.
 
 Does not do school work, because it sucks, you know.
 
+Check out my website [here](https://pranavpurwar.ga)
+
 ## Background
 
 Currently working on my project [Java-Ide](https://github.com/PranavPurwar/Java-Ide)
