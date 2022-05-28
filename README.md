@@ -3,10 +3,6 @@
 ![Overview](https://github.com/PranavPurwar/PranavPurwar/blob/master/generated/overview.svg)
 ![Most Used Languages](https://github.com/PranavPurwar/PranavPurwar/blob/master/generated/languages.svg)
 
-Young 14yo full time programmer.
-
-Does not do school work, because it sucks, you know.
-
 Check out my website [here](https://pranavpurwar.ga)
 
 ## Background
