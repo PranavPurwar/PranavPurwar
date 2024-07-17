@@ -15,7 +15,7 @@ I work git, bash, zsh, Visual Studio Code, Android Studio, Intellij Idea, Cursor
 I've also been a major contributor to [Sketchware Pro](https://github.com/Sketchware-Pro/Sketchware-Pro) and have gained a lot of insights about reverse engineering android apps.
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=PranavPurwar&show_icons=true&count_private=true&bg_color=00000000&text_color=808080&hide_border=true" alt="PranavPurwar" />
+  <img src="https://github-readme-stats.vercel.app/api?username=PranavPurwar&show_icons=true&count_private=true&bg_color=00000000&text_color=808080&hide_border=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage" alt="PranavPurwar" />
   <img src="https://github-readme-streak-stats.herokuapp.com?user=PranavPurwar&theme=onedark&hide_border=true&background=00000000&stroke=80808080" alt="PranavPurwar" />
   <a href="https://wakatime.com/@pranavpurwar"> <img src="https://github-readme-stats.vercel.app/api/wakatime?username=@pranavpurwar&show_icons=true&layout=compact&bg_color=00000000&text_color=808080&hide_border=true&range=all_time" alt="PranavPurwar" /> </a>
 </p>
