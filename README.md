@@ -2,17 +2,15 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=600&color=229C43&width=435&lines=Hi%2C+I'm+Pranav.;I+do+Android.;I+do+Web.)](https://git.io/typing-svg)
 
-- I'm currently learning **Figma**.
+- I'm currently learning **Bun**.
 - I've been making **Android** and **Web** apps.
-- I'm interested in **Animation** and **Cyber Security**.
-- I'm often working on [Cosmic-Ide](https://github.com/Cosmic-Ide/Cosmic-Ide).
+- I'm interested in **Cyber Security** and **Low Level Programming**.
+- I'm working on a ***secret project!***
 
 I've been into programming since the age of **11!**
 
 I have en extensive experience with Kotlin, Java and Python.
 I work git, bash, zsh, Visual Studio Code, Android Studio, Intellij Idea, Cursor, Figma, PyCharm and my *own* Cosmic IDE.
-
-I've also been a major contributor to [Sketchware Pro](https://github.com/Sketchware-Pro/Sketchware-Pro) and have gained a lot of insights about reverse engineering android apps.
 
 <p align="center">
   
