@@ -4,8 +4,9 @@
 
 - I'm currently working on a ***Secret Project***!
 - I make **Android** and **Fullstack** web apps, along with libraries, programs and scripts.
-- I love to build, break and reverse-engineer stuff
-- I'm interested in ***Compilers*** and ***Neural Networks***.
+- I love to build, break and reverse-engineer stuff.
+- Currently learning Go and Flutter
+- Interested in **Neural Networks**
 
 <p align="center">
   
