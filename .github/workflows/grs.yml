@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: "0 3 * * *"
   workflow_dispatch:
+  push:
 
 jobs:
   build:
@@ -15,7 +16,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
             card: wakatime
-            options: username=pranavpurwar&show_icons=true&layout=compact&bg_color=00000000&text_color=808080&hide_border=true&range=all_time&langs_count=30
+            options: username=pranavpurwar&show_icons=true&layout=compact&bg_color=00000000&text_color=808080&hide_border=true&range=all_time&langs_count=10
             token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit cards
