@@ -9,7 +9,7 @@
 ---
 
 ### Core Projects
-* **[ReConnect](https://github.com/aload0/ReConnect)**: Relationship manager utilizing Jetpack Compose, physics-based motion tokens, and Material 3 Expressive.
+* **[ReConnect](https://github.com/PranavPurwar/ReConnect)**: Relationship manager utilizing Jetpack Compose, physics-based motion tokens, and Material 3 Expressive.
 * **[Sketchware Pro](https://github.com/Sketchware-Pro)**: Core contributor; modernized build pipelines, integrated R8/D8, and optimized dependency resolution.
 * **[App Lock](https://github.com/aload0/AppLock)**: Privacy-centric security tool for locking applications on Android.
 * **[Cosmic IDE](https://github.com/Cosmic-IDE)**: JVM-based mobile IDE for Android development.
