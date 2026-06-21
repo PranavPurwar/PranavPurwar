@@ -1,0 +1,81 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: "Pranav Purwar"
+  location: "Delhi, India"
+  email: "purwarpranav80@gmail.com"
+  social_networks:
+    - network: GitHub
+      username: PranavPurwar
+    - network: LinkedIn
+      username: pranavpurwar
+
+  sections:
+    summary:
+      - "Systems & Infrastructure Engineer who independently architects complex systems from scratch—compiler toolchains, AI backends, and mobile IDEs. Specializes in JVM internals, Kotlin Multiplatform, and LLM orchestration. Proven track record of solo 0-to-1 product delivery and core contributions to high-traffic open-source ecosystems (10k+ MAU)."
+
+    experience:
+      - company: "Independent Engineering & Open Source"
+        position: "Systems Architect & Core Maintainer"
+        start_date: "2021-08"
+        location: "Delhi, India"
+        highlights:
+          - "Solely architected and deployed production-grade AI infrastructure, JVM compiler ports, and mobile developer tools."
+          - "Core Team member at Sketchware-Pro, managing toolchain infrastructure for an open-source platform with 10,000+ MAU."
+          - "Delivered full-lifecycle mobile products (Reef, AppLock) published on F-Droid/IzzyOnDroid, handling UX, local storage, and community operations."
+
+    projects:
+      - name: "Bryte AI Platform"
+        start_date: "2024-09"
+        highlights:
+          - "Architected a multi-module Kotlin Multiplatform (KMP) backend to ingest heavy unstructured data—including up to 3-hour YouTube transcripts and 50MB PDFs—into structured knowledge graphs."
+          - "Implemented a native **FSRS v4 algorithm** in Kotlin, calculating Stability/Difficulty/Retrievability to schedule learning intervals dynamically."
+          - "Engineered a weighted **GraphRAG** layer on **Neo4j** balancing local document bias vs. cross-document penalties using hybrid vector/Cypher queries."
+          - "Built a custom Mistral AI SDK with SSE streaming and resilient Markdown streaming parsers for real-time LLM token handling."
+
+      - name: "Cosmic IDE"
+        start_date: "2021-08"
+        highlights:
+          - "Built a complete JVM development environment for Android from scratch, supporting Java 27 and Kotlin 2.4 (K2 compiler)."
+          - "Implemented full code completion, navigation, and refactoring for Java/Kotlin via LSP integration."
+          - "Integrated Git version control directly within the IDE."
+          - "Added a bytecode disassembler for viewing compiled class files and a custom build system with incremental compilation dropping subsequent build times by ~80%."
+          - "Integrated Google Gemini AI for contextual code assistance."
+          - "Designed a plugin architecture allowing third-party extensions."
+
+      - name: "OpenJDK & Kotlin Compiler Ports (Android)"
+        start_date: "2023-09"
+        highlights:
+          - "Maintain surgical, highly maintainable forks of `javac` (OpenJDK 27+) and `kotlinc` (2.4+) for Android runtime environments (ART)."
+          - "Replaced unsafe JVM memory calls (`copyMemory`, `Unsafe.clean`) with NIO-safe alternatives, enabling seamless execution of modern Java/Kotlin features on mobile."
+          - "Achieved zero-divergence patches allowing upstream OpenJDK/Kotlin updates to be merged within 48 hours of release with sub-100-line diff overhead."
+
+      - name: "Official Kotlin Compiler Contribution (JetBrains/kotlin #5146)"
+        start_date: "2024"
+        highlights:
+          - "Merged a memory leak fix into the official Kotlin compiler repository."
+          - "Diagnosed unreleased `Inflater` resources in `ZipImplementation` when the `-Xuse-fast-jar-file-system` flag is active."
+          - "Patched `MappedByteBuffer.contentsToByteArray` to explicitly call `inflater.end()` – resolving resource exhaustion in long-running compilation daemons."
+          - "Fix manually reviewed and merged by the JetBrains core compiler team."
+
+      - name: "Sketchware-Pro (Core Team)"
+        start_date: "2021-08"
+        highlights:
+          - "Core maintainer for an Android development platform with **10,000+ MAU**."
+          - "Architected the build-system pipeline to support **Java 9/10/11** compilation and integrated **R8 Code Shrinker**, reducing output APK sizes by ~40%."
+          - "Implemented ViewBinding support and overhauled the dependency manager for transitive Maven/Gradle resolution."
+
+      - name: "Reef & AppLock (Mobile Product Delivery)"
+        start_date: "2024-09"
+        highlights:
+          - "Developed and published Reef (digital health/focus tool) and AppLock (biometric privacy tool) on F-Droid and IzzyOnDroid with 100k+ combined downloads."
+          - "Managed full product lifecycle including Material You UX design, secure local storage architecture, and open-source community translations."
+
+    skills:
+      - label: "Languages & Runtimes"
+        details: "Kotlin, Java, C++, Python, TypeScript, JVM Bytecode, DEX/ART"
+      - label: "Compiler & Toolchain"
+        details: "OpenJDK Toolchain, Kotlin Compiler, JDT Language Server, Gradle, R8"
+      - label: "Backend & AI Infrastructure"
+        details: "Ktor, kotlinx.rpc, Neo4j (Cypher/Vector), GraphRAG, LLM Agents (Koog), FSRS, Mistral/Cohere APIs"
+      - label: "Mobile & Platforms"
+        details: "Android SDK, Jetpack Compose, Kotlin Multiplatform (KMP), Material You, F-Droid Publishing"
