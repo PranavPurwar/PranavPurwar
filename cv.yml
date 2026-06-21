@@ -11,35 +11,24 @@ cv:
 
   sections:
     summary:
-      - "Systems & Infrastructure Engineer who independently architects complex systems from scratch—compiler toolchains, AI backends, and mobile IDEs. Specializes in JVM internals, Kotlin Multiplatform, and LLM orchestration. Proven track record of solo 0-to-1 product delivery and core contributions to high-traffic open-source ecosystems (10k+ MAU)."
-
-    experience:
-      - company: "Independent Engineering & Open Source"
-        position: "Systems Architect & Core Maintainer"
-        start_date: "2021-08"
-        location: "Delhi, India"
-        highlights:
-          - "Solely architected and deployed production-grade AI infrastructure, JVM compiler ports, and mobile developer tools."
-          - "Core Team member at Sketchware-Pro, managing toolchain infrastructure for an open-source platform with 10,000+ MAU."
-          - "Delivered full-lifecycle mobile products (Reef, AppLock) published on F-Droid/IzzyOnDroid, handling UX, local storage, and community operations."
+      - "Systems & Infrastructure Engineer architecting production-grade compiler toolchains, AI backends, and mobile developer tools. Specialist in JVM internals, KMP, and LLM orchestration with a track record of core contributions to high-traffic open-source ecosystems (10k+ MAU)."
 
     projects:
       - name: "Bryte AI Platform"
         start_date: "2024-09"
         highlights:
-          - "Architected a multi-module Kotlin Multiplatform (KMP) backend to ingest heavy unstructured data—including up to 3-hour YouTube transcripts and 50MB PDFs—into structured knowledge graphs."
-          - "Implemented a native **FSRS v4 algorithm** in Kotlin, calculating Stability/Difficulty/Retrievability to schedule learning intervals dynamically."
-          - "Engineered a weighted **GraphRAG** layer on **Neo4j** balancing local document bias vs. cross-document penalties using hybrid vector/Cypher queries."
-          - "Built a custom Mistral AI SDK with SSE streaming and resilient Markdown streaming parsers for real-time LLM token handling."
+          - "Architected a high-throughput KMP backend to normalize heavy multi-modal unstructured data (long-form video/PDFs) into structured, queryable knowledge graphs."
+          - "Engineered a native FSRS v4 implementation in Kotlin, autonomously optimizing cognitive load through real-time Stability/Difficulty/Retrievability computation."
+          - "Designed a hybrid GraphRAG architecture on Neo4j that dynamically balances document-level semantics against cross-document relational penalties."
+          - "Built an agentic pipeline using a custom Mistral SDK and a stateful MarkdownStreamingParser to reconstruct complex domain objects in real-time from raw LLM tokens."
 
       - name: "Cosmic IDE"
         start_date: "2021-08"
         highlights:
           - "Built a complete JVM development environment for Android from scratch, supporting Java 27 and Kotlin 2.4 (K2 compiler)."
           - "Implemented full code completion, navigation, and refactoring for Java/Kotlin via LSP integration."
-          - "Integrated Git version control directly within the IDE."
+          - "Integrated Git version control, and Gemini AI directly within the IDE."
           - "Added a bytecode disassembler for viewing compiled class files and a custom build system with incremental compilation dropping subsequent build times by ~80%."
-          - "Integrated Google Gemini AI for contextual code assistance."
           - "Designed a plugin architecture allowing third-party extensions."
 
       - name: "OpenJDK & Kotlin Compiler Ports (Android)"
@@ -47,7 +36,7 @@ cv:
         highlights:
           - "Maintain surgical, highly maintainable forks of `javac` (OpenJDK 27+) and `kotlinc` (2.4+) for Android runtime environments (ART)."
           - "Replaced unsafe JVM memory calls (`copyMemory`, `Unsafe.clean`) with NIO-safe alternatives, enabling seamless execution of modern Java/Kotlin features on mobile."
-          - "Achieved zero-divergence patches allowing upstream OpenJDK/Kotlin updates to be merged within 48 hours of release with sub-100-line diff overhead."
+          - "Achieved zero-divergence patches allowing upstream OpenJDK/Kotlin updates to be unified within 48 hours of release with sub-100-line diff overhead."
 
       - name: "Official Kotlin Compiler Contribution (JetBrains/kotlin #5146)"
         start_date: "2024"
@@ -79,3 +68,137 @@ cv:
         details: "Ktor, kotlinx.rpc, Neo4j (Cypher/Vector), GraphRAG, LLM Agents (Koog), FSRS, Mistral/Cohere APIs"
       - label: "Mobile & Platforms"
         details: "Android SDK, Jetpack Compose, Kotlin Multiplatform (KMP), Material You, F-Droid Publishing"
+
+
+design:
+  theme: classic
+  page:
+    size: a4
+    top_margin: 0.5in
+    bottom_margin: 0.5in
+    left_margin: 0.45in
+    right_margin: 0.45in
+    show_footer: true
+    show_top_note: true
+  colors:
+    body: rgb(0, 0, 0)
+    name: rgb(0, 79, 144)
+    headline: rgb(0, 79, 144)
+    connections: rgb(0, 79, 144)
+    section_titles: rgb(0, 79, 144)
+    links: rgb(0, 79, 144)
+    footer: rgb(128, 128, 128)
+    top_note: rgb(128, 128, 128)
+  typography:
+    line_spacing: 0.5em
+    alignment: justified
+    date_and_location_column_alignment: right
+    font_family:
+      body: Source Sans 3
+      name: Source Sans 3
+      headline: Source Sans 3
+      connections: Source Sans 3
+      section_titles: Source Sans 3
+    font_size:
+      body: 10pt
+      name: 24pt
+      headline: 10pt
+      connections: 10pt
+      section_titles: 1.4em
+    small_caps:
+      name: false
+      headline: false
+      connections: false
+      section_titles: false
+    bold:
+      name: true
+      headline: false
+      connections: false
+      section_titles: false
+  links:
+    underline: false
+    show_external_link_icon: false
+  header:
+    alignment: center
+    photo_width: 3.5cm
+    photo_position: left
+    photo_space_left: 0.4cm
+    photo_space_right: 0.4cm
+    space_below_name: 0.7cm
+    space_below_headline: 0.7cm
+    space_below_connections: 0.7cm
+    connections:
+      phone_number_format: national
+      hyperlink: true
+      show_icons: true
+      display_urls_instead_of_usernames: false
+      separator: ''
+      space_between_connections: 0.5cm
+  section_titles:
+    type: with_partial_line
+    line_thickness: 0.5pt
+    space_above: 0.4cm
+    space_below: 0.3cm
+  sections:
+    allow_page_break: true
+    space_between_regular_entries: 0.8em
+    space_between_text_based_entries: 0.3em
+    show_time_spans_in:
+      - experience
+  entries:
+    date_and_location_width: 3.4cm
+    side_space: 0.2cm
+    space_between_columns: 0.1cm
+    allow_page_break: false
+    short_second_row: true
+    degree_width: 1cm
+    summary:
+      space_above: 0cm
+      space_left: 0cm
+    highlights:
+      bullet: •
+      nested_bullet: •
+      space_left: 0.15cm
+      space_above: 0cm
+      space_between_items: 0cm
+      space_between_bullet_and_text: 0.5em
+  templates:
+    footer: '*NAME -- PAGE_NUMBER/TOTAL_PAGES*'
+    top_note: '*LAST_UPDATED CURRENT_DATE*'
+    single_date: MONTH_ABBREVIATION YEAR
+    date_range: START_DATE – END_DATE
+    time_span: HOW_MANY_YEARS YEARS HOW_MANY_MONTHS MONTHS
+    one_line_entry:
+      main_column: '**LABEL:** DETAILS'
+    education_entry:
+      main_column: |-
+        **INSTITUTION**, AREA
+        SUMMARY
+        HIGHLIGHTS
+      degree_column: '**DEGREE**'
+      date_and_location_column: |-
+        LOCATION
+        DATE
+    normal_entry:
+      main_column: |-
+        **NAME**
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column: |-
+        LOCATION
+        DATE
+    experience_entry:
+      main_column: |-
+        **COMPANY**, POSITION
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column: |-
+        LOCATION
+        DATE
+    publication_entry:
+      main_column: |-
+        **TITLE**
+        SUMMARY
+        AUTHORS
+        URL (JOURNAL)
+      date_and_location_column: DATE
