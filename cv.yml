@@ -11,7 +11,7 @@ cv:
 
   sections:
     summary:
-      - "Systems & Infrastructure Engineer architecting production-grade compiler toolchains, AI backends, and mobile developer tools. Specialist in JVM internals, KMP, and LLM orchestration with a track record of core contributions to high-traffic open-source ecosystems (10k+ MAU)."
+      - "Systems engineer specializing in JVM internals, compiler toolchains, AI infrastructure, and Android developer tools. Core contributor and maintainer of open-source platforms serving 10k+ monthly active users."
 
     projects:
       - name: "Bryte AI Platform"
@@ -49,9 +49,9 @@ cv:
       - name: "Sketchware-Pro (Core Team)"
         start_date: "2021-08"
         highlights:
-          - "Core maintainer for an Android development platform with **10,000+ MAU**."
+          - "Core team member for an Android development platform with **10,000+ MAU**."
           - "Architected the build-system pipeline to support **Java 9/10/11** compilation and integrated **R8 Code Shrinker**, reducing output APK sizes by ~40%."
-          - "Implemented ViewBinding support and overhauled the dependency manager for transitive Maven/Gradle resolution."
+          - "Designed and implemented the dependency resolution architecture supporting transitive Maven/Gradle dependency management."
 
       - name: "Reef & AppLock (Mobile Product Delivery)"
         start_date: "2024-09"
@@ -60,12 +60,12 @@ cv:
           - "Managed full product lifecycle including Material You UX design, secure local storage architecture, and open-source community translations."
 
     skills:
-      - label: "Languages & Runtimes"
-        details: "Kotlin, Java, C++, Python, TypeScript, JVM Bytecode, DEX/ART"
+      - label: "Languages"
+        details: "Kotlin, Java, Python, TypeScript, JVM Bytecode, DEX/ART"
       - label: "Compiler & Toolchain"
-        details: "OpenJDK Toolchain, Kotlin Compiler, JDT Language Server, Gradle, R8"
+        details: "OpenJDK, Kotlin, ART, LSP, Gradle, R8/D8"
       - label: "Backend & AI Infrastructure"
-        details: "Ktor, kotlinx.rpc, Neo4j (Cypher/Vector), GraphRAG, LLM Agents (Koog), FSRS, Mistral/Cohere APIs"
+        details: "Ktor, kRPC, Neo4j (Cypher/Vector), GraphRAG, LLM Agents (Koog), FSRS, Mistral/Cohere APIs"
       - label: "Mobile & Platforms"
         details: "Android SDK, Jetpack Compose, Kotlin Multiplatform (KMP), Material You, F-Droid Publishing"
 
