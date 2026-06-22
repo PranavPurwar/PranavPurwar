@@ -1,6 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: "Pranav Purwar"
+  headline: "18-year-old Self-Taught Systems Engineer & Open-Source Maintainer"
   location: "Delhi, India"
   email: "purwarpranav80@gmail.com"
   social_networks:
@@ -11,64 +12,59 @@ cv:
 
   sections:
     summary:
-      - "Systems engineer specializing in JVM internals, compiler toolchains, AI infrastructure, and Android developer tools. Core contributor and maintainer of open-source platforms serving 10k+ monthly active users."
+      - "Systems engineer specializing in JVM internals, compiler toolchains, AI infrastructure, and Android developer tools. Core contributor and maintainer of open-source platforms serving 100k+ users."
 
     projects:
       - name: "Bryte AI Platform"
         start_date: "2024-09"
         highlights:
-          - "Architected a high-throughput KMP backend to normalize heavy multi-modal unstructured data (long-form video/PDFs) into structured, queryable knowledge graphs."
-          - "Engineered a native FSRS v4 implementation in Kotlin, autonomously optimizing cognitive load through real-time Stability/Difficulty/Retrievability computation."
-          - "Designed a hybrid GraphRAG architecture on Neo4j that dynamically balances document-level semantics against cross-document relational penalties."
-          - "Built an agentic pipeline using a custom Mistral SDK and a stateful MarkdownStreamingParser to reconstruct complex domain objects in real-time from raw LLM tokens."
-
-      - name: "Cosmic IDE"
-        start_date: "2021-08"
-        highlights:
-          - "Built a complete JVM development environment for Android from scratch, supporting Java 27 and Kotlin 2.4 (K2 compiler)."
-          - "Implemented full code completion, navigation, and refactoring for Java/Kotlin via LSP integration."
-          - "Integrated Git version control, and Gemini AI directly within the IDE."
-          - "Added a bytecode disassembler for viewing compiled class files and a custom build system with incremental compilation dropping subsequent build times by ~80%."
-          - "Designed a plugin architecture allowing third-party extensions."
+          - "Engineered a full KMP backend (Ktor 3.5) utilizing `kotlinx.rpc` over WebSockets for full-duplex streaming. Implemented stateful AI agent orchestration (JetBrains Koog) with custom history compression to manage 100k+ token contexts natively."
+          - "Built a multi-modal ingestion pipeline bypassing official APIs (custom NewPipe extractor, custom Mistral SDK). Developed a hybrid GraphRAG engine on Neo4j executing weighted Cypher queries and Cohere reranking to balance local document focus against cross-document semantic bridges."
+          - "Built an event-driven streaming parser that intercepts fragmented LLM tokens, utilizing heuristic recovery and secondary LLM fallbacks to reconstruct broken structures mid-stream. Ported the FSRS v4 algorithm to Kotlin, calculating Stability, Difficulty, and Retrievability for dynamic cognitive scheduling."
 
       - name: "OpenJDK & Kotlin Compiler Ports (Android)"
         start_date: "2023-09"
         highlights:
-          - "Maintain surgical, highly maintainable forks of `javac` (OpenJDK 27+) and `kotlinc` (2.4+) for Android runtime environments (ART)."
-          - "Replaced unsafe JVM memory calls (`copyMemory`, `Unsafe.clean`) with NIO-safe alternatives, enabling seamless execution of modern Java/Kotlin features on mobile."
-          - "Achieved zero-divergence patches allowing upstream OpenJDK/Kotlin updates to be unified within 48 hours of release with sub-100-line diff overhead."
+          - "Port `javac` (OpenJDK 27 EA) and `kotlinc` (2.4+) to the Android Runtime (ART), maintaining highly cohesive patches to sync upstream releases within 48 hours."
+          - "Rewrote `javac`'s internal platform resolution to bypass Android's restricted NIO (implementing a custom `ZipFileSystem` for `ct.sym`) and replaced `URLClassLoader` with Android's `PathClassLoader` in `kotlinc` to resolve classloading incompatibilities."
+          - "Engineered a custom memory reclamation layer using `HiddenApiBypass` to invoke Android's internal `NioUtils.freeDirectBuffer`, preventing fatal native OOM crashes during memory-mapped JAR parsing."
 
       - name: "Official Kotlin Compiler Contribution (JetBrains/kotlin #5146)"
-        start_date: "2024"
+        date: "2023-11"
         highlights:
-          - "Merged a memory leak fix into the official Kotlin compiler repository."
+          - "Merged a critical memory leak fix into the official Kotlin compiler repository."
           - "Diagnosed unreleased `Inflater` resources in `ZipImplementation` when the `-Xuse-fast-jar-file-system` flag is active."
-          - "Patched `MappedByteBuffer.contentsToByteArray` to explicitly call `inflater.end()` – resolving resource exhaustion in long-running compilation daemons."
-          - "Fix manually reviewed and merged by the JetBrains core compiler team."
+          - "Patched `MappedByteBuffer.contentsToByteArray` to explicitly call `inflater.end()`, resolving resource exhaustion in long-running compilation daemons."
 
-      - name: "Sketchware-Pro (Core Team)"
+      - name: "Cosmic IDE"
         start_date: "2021-08"
         highlights:
-          - "Core team member for an Android development platform with **10,000+ MAU**."
-          - "Architected the build-system pipeline to support **Java 9/10/11** compilation and integrated **R8 Code Shrinker**, reducing output APK sizes by ~40%."
-          - "Designed and implemented the dependency resolution architecture supporting transitive Maven/Gradle dependency management."
+          - "Built a complete, from-scratch JVM development environment for Android, integrating custom compiler toolchains, LSP-based code completion, and a plugin architecture."
+          - "Integrated the Kotlin Incremental Compiler and optimized the build pipeline, reducing subsequent IDE compilation latency by ~80%."
+          - "Added Git version control, Gemini AI, and a custom bytecode disassembler directly into the mobile IDE."
+
+      - name: "Sketchware-Pro (Core Team & Technical Lead)"
+        start_date: "2021-08"
+        highlights:
+          - "Core team member and technical lead for an Android development platform with 1.6k+ GitHub stars and 10,000+ MAU."
+          - "Led architectural decisions and conducted rigorous code reviews for a distributed team of 58 active contributors, enforcing CI/CD standards and design patterns."
+          - "Built the build-system pipeline to support Java 9/11 compilation and integrated the R8 Code Shrinker, reducing output APK sizes by ~40%."
 
       - name: "Reef & AppLock (Mobile Product Delivery)"
         start_date: "2024-09"
         highlights:
-          - "Developed and published Reef (digital health/focus tool) and AppLock (biometric privacy tool) on F-Droid and IzzyOnDroid with 100k+ combined downloads."
-          - "Managed full product lifecycle including Material You UX design, secure local storage architecture, and open-source community translations."
+          - "Developed and published Reef (digital health) and AppLock (biometric privacy) on F-Droid and IzzyOnDroid, achieving 100k+ combined downloads."
+          - "Managed the full product lifecycle including Material You UX design, secure local storage architecture, and open-source community translations."
 
     skills:
       - label: "Languages"
         details: "Kotlin, Java, Python, TypeScript, JVM Bytecode, DEX/ART"
       - label: "Compiler & Toolchain"
-        details: "OpenJDK, Kotlin, ART, LSP, Gradle, R8/D8"
+        details: "OpenJDK, Kotlin, ART, LSP, Gradle, R8/D8, Hidden API Bypass"
       - label: "Backend & AI Infrastructure"
-        details: "Ktor, kRPC, Neo4j (Cypher/Vector), GraphRAG, LLM Agents (Koog), FSRS, Mistral/Cohere APIs"
+        details: "Ktor, Neo4j (Cypher/Vector), GraphRAG, LLM Agents, FSRS, Mistral/Cohere APIs"
       - label: "Mobile & Platforms"
-        details: "Android SDK, Jetpack Compose, Kotlin Multiplatform (KMP), Material You, F-Droid Publishing"
-
+        details: "Android SDK, Jetpack Compose, Kotlin Multiplatform (KMP), Material You, F-Droid"
 
 design:
   theme: classic
@@ -76,8 +72,8 @@ design:
     size: a4
     top_margin: 0.5in
     bottom_margin: 0.5in
-    left_margin: 0.45in
-    right_margin: 0.45in
+    left_margin: 0.47in
+    right_margin: 0.47in
     show_footer: true
     show_top_note: true
   colors:
@@ -104,7 +100,7 @@ design:
       name: 24pt
       headline: 10pt
       connections: 10pt
-      section_titles: 1.4em
+      section_titles: 1.3em # Reduced from 1.4em
     small_caps:
       name: false
       headline: false
@@ -120,34 +116,30 @@ design:
     show_external_link_icon: false
   header:
     alignment: center
-    photo_width: 3.5cm
-    photo_position: left
-    photo_space_left: 0.4cm
-    photo_space_right: 0.4cm
-    space_below_name: 0.7cm
-    space_below_headline: 0.7cm
-    space_below_connections: 0.7cm
+    space_below_name: 0.4cm
+    space_below_headline: 0.4cm
+    space_below_connections: 0.4cm
     connections:
       phone_number_format: national
       hyperlink: true
       show_icons: true
       display_urls_instead_of_usernames: false
       separator: ''
-      space_between_connections: 0.5cm
+      space_between_connections: 0.4cm
   section_titles:
     type: with_partial_line
     line_thickness: 0.5pt
-    space_above: 0.4cm
-    space_below: 0.3cm
+    space_above: 0.3cm
+    space_below: 0.4cm
   sections:
     allow_page_break: true
-    space_between_regular_entries: 0.8em
-    space_between_text_based_entries: 0.3em
+    space_between_regular_entries: 0.5em # Reduced from 0.8em
+    space_between_text_based_entries: 0.2em
     show_time_spans_in:
       - experience
   entries:
-    date_and_location_width: 3.4cm
-    side_space: 0.2cm
+    date_and_location_width: 3.2cm
+    side_space: 0.15cm
     space_between_columns: 0.1cm
     allow_page_break: false
     short_second_row: true
@@ -160,11 +152,11 @@ design:
       nested_bullet: •
       space_left: 0.15cm
       space_above: 0cm
-      space_between_items: 0cm
-      space_between_bullet_and_text: 0.5em
+      space_between_items: 0.1em # Added slight spacing for readability
+      space_between_bullet_and_text: 0.4em
   templates:
-    footer: '*NAME -- PAGE_NUMBER/TOTAL_PAGES*'
-    top_note: '*LAST_UPDATED CURRENT_DATE*'
+    footer: ''
+    top_note: ''
     single_date: MONTH_ABBREVIATION YEAR
     date_range: START_DATE – END_DATE
     time_span: HOW_MANY_YEARS YEARS HOW_MANY_MONTHS MONTHS
