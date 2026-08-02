@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: "Pranav Purwar"
-  headline: "18-year-old Self-Taught Systems Engineer & Open-Source Maintainer"
+  headline: "Systems Engineer | JVM Internals & Android Virtualization"
   location: "Delhi, India"
   email: "purwarpranav80@gmail.com"
   social_networks:
@@ -9,62 +9,75 @@ cv:
       username: PranavPurwar
     - network: LinkedIn
       username: pranavpurwar
+  
 
   sections:
     summary:
-      - "Systems engineer specializing in JVM internals, compiler toolchains, AI infrastructure, and Android developer tools. Core contributor and maintainer of open-source platforms serving 100k+ users."
+      - "**Systems Engineer** specializing in *JVM internals*, *compiler toolchains*, *AI infrastructure*, and *Android OS-level virtualization*. Creator of **Cosmic IDE** (**686+ stars**, **100+ forks**) featuring custom glibc runtime with recursive process wrapping, and **Bryte AI Platform** with *native FSRS v4 implementation* and *GraphRAG retrieval*. Core contributor to open-source platforms with **1.2M+ downloads** and **30k+ daily users**."
 
-    projects:
-      - name: "Bryte AI Platform"
+    experience:
+      - name: "Bryte AI Platform (Open-Source) | Creator & Lead Developer"
+        location: "[**GitHub**](https://github.com/Bryte-Edu/server)"
         start_date: "2024-09"
         highlights:
-          - "Engineered a full KMP backend (Ktor 3.5) utilizing `kotlinx.rpc` over WebSockets for full-duplex streaming. Implemented stateful AI agent orchestration (JetBrains Koog) with custom history compression to manage 100k+ token contexts natively."
-          - "Built a multi-modal ingestion pipeline bypassing official APIs (custom NewPipe extractor, custom Mistral SDK). Developed a hybrid GraphRAG engine on Neo4j executing weighted Cypher queries and Cohere reranking to balance local document focus against cross-document semantic bridges."
-          - "Built an event-driven streaming parser that intercepts fragmented LLM tokens, utilizing heuristic recovery and secondary LLM fallbacks to reconstruct broken structures mid-stream. Ported the FSRS v4 algorithm to Kotlin, calculating Stability, Difficulty, and Retrievability for dynamic cognitive scheduling."
+          - "Designed **Kotlin Multiplatform** backend infrastructure for multi-modal document ingestion (PDF/OCR via Mistral SDK, YouTube via open-source extractor, web scraping with recursive HTML cleaning and LLM-powered hierarchical reconstruction)."
+          - "Implemented production-grade **GraphRAG** with Neo4j: **1024-dim vector index** with cosine similarity, weighted Cypher queries (configurable docBias/crossDocPenalty), automatic chunk interlinking with semantic thresholds (**≥0.65**), and real-time graph visualization endpoints."
+          - "Engineered native Kotlin port of **FSRS v4** (spaced-repetition algorithm) with exact mathematical fidelity to upstream."
+          - "Architected stateful AI agent orchestration using JetBrains Koog framework with autonomous history compression for **100k+ token context windows**, plus resilient MarkdownStreamingParser for real-time fragmented token processing with heuristic recovery for broken table structures."
+          - "Built full-duplex WebSocket communication via kotlinx.rpc: multiplexed SessionService and FlashcardService over single connections with type-safe contracts, enabling **real-time streaming** of generated content to clients the millisecond they are parsed."
+
+
+      - name: "Cosmic IDE | Creator & Architect"
+        location: "[**GitHub**](https://github.com/Cosmic-IDE/Cosmic-IDE)"
+        start_date: "2021-08"
+        highlights:
+          - "Architected full Linux OS environment on Android without root, proot, or containers using custom glibc runtime with **LD_PRELOAD shims** that intercept filesystem, DNS, and process execution calls."
+          - "Designed **recursive process sandboxing**: execve/execvp/posix_spawn interception ensures all child processes inherit shim chain, preventing any process from escaping the sandbox."
+          - "Engineered **native PTY implementation** with proper terminal emulation, foreground process group signal handling, and Ctrl+C propagation for interactive shells."
+          - "Built plugin-based IDE architecture with **11 language plugins** (Rust, Java, Kotlin, Scala, Gradle, Maven, Go, Gleam, C/C++, Python, Lua) using dynamic loading and marketplace system."
+          - "Implemented complete Arch Linux ARM runtime with **pacman integration**, fake root support, and automated glibc environment generation."
+          - "Developed full-featured IDE with **real-time code analysis**, quick fixes, and LSP support across all plugins directly on mobile."
 
       - name: "OpenJDK & Kotlin Compiler Ports (Android)"
+        location: "[**OpenJDK**](https://github.com/PranavPurwar/javac-android) | [**Kotlin Compiler**](https://github.com/PranavPurwar/kotlinc-android)"
         start_date: "2023-09"
         highlights:
-          - "Port `javac` (OpenJDK 27 EA) and `kotlinc` (2.4+) to the Android Runtime (ART), maintaining highly cohesive patches to sync upstream releases within 48 hours."
-          - "Rewrote `javac`'s internal platform resolution to bypass Android's restricted NIO (implementing a custom `ZipFileSystem` for `ct.sym`) and replaced `URLClassLoader` with Android's `PathClassLoader` in `kotlinc` to resolve classloading incompatibilities."
-          - "Engineered a custom memory reclamation layer using `HiddenApiBypass` to invoke Android's internal `NioUtils.freeDirectBuffer`, preventing fatal native OOM crashes during memory-mapped JAR parsing."
+          - "Ported javac (**OpenJDK 27 EA**) and kotlinc (**2.4+**) to Android Runtime (**ART)**, maintaining patches synced with upstream releases."
+          - "Rewrote javac's internal platform resolution to bypass Android's restricted NIO by implementing **custom ZipFileSystem** for ct.sym, and patched classloading incompatibilities."
+          - "Engineered memory reclamation layer using HiddenApiBypass to invoke Android's internal NioUtils.freeDirectBuffer, preventing **fatal OOM crashes** during memory-mapped JAR parsing."
 
       - name: "Official Kotlin Compiler Contribution (JetBrains/kotlin #5146)"
+        location: "[**Pull Request**](https://github.com/JetBrains/kotlin/pull/5146)"
         date: "2023-11"
         highlights:
-          - "Merged a critical memory leak fix into the official Kotlin compiler repository."
-          - "Diagnosed unreleased `Inflater` resources in `ZipImplementation` when the `-Xuse-fast-jar-file-system` flag is active."
-          - "Patched `MappedByteBuffer.contentsToByteArray` to explicitly call `inflater.end()`, resolving resource exhaustion in long-running compilation daemons."
+          - "Contributed to the official Kotlin compiler by resolving a **critical memory leak**, improving performance for fast JAR file system operations."
 
-      - name: "Cosmic IDE"
+      - name: "Sketchware-Pro | Core Team & Technical Lead"
+        location: "[**GitHub**](https://github.com/Sketchware-Pro/Sketchware-Pro)"
         start_date: "2021-08"
         highlights:
-          - "Built a complete, from-scratch JVM development environment for Android, integrating custom compiler toolchains, LSP-based code completion, and a plugin architecture."
-          - "Integrated the Kotlin Incremental Compiler and optimized the build pipeline, reducing subsequent IDE compilation latency by ~80%."
-          - "Added Git version control, Gemini AI, and a custom bytecode disassembler directly into the mobile IDE."
+          - "Part of core team for the IDE (**1.6k+ stars**, **100k+ MAU**, **58+ contributors**) powered by the **ported Kotlin compiler**."
+          - "Built build-system pipeline supporting Java 9/11 compilation; integrated **R8 Code Shrinker** reducing output **APK sizes by ~40%**."
 
-      - name: "Sketchware-Pro (Core Team & Technical Lead)"
-        start_date: "2021-08"
-        highlights:
-          - "Core team member and technical lead for an Android development platform with 1.6k+ GitHub stars and 10,000+ MAU."
-          - "Led architectural decisions and conducted rigorous code reviews for a distributed team of 58 active contributors, enforcing CI/CD standards and design patterns."
-          - "Built the build-system pipeline to support Java 9/11 compilation and integrated the R8 Code Shrinker, reducing output APK sizes by ~40%."
-
-      - name: "Reef & AppLock (Mobile Product Delivery)"
+      - name: "Reef (Digital Wellbeing & Productivity)"
         start_date: "2024-09"
+        location: "[**Reef**](https://github.com/aload0/Reef)"
         highlights:
-          - "Developed and published Reef (digital health) and AppLock (biometric privacy) on F-Droid and IzzyOnDroid, achieving 100k+ combined downloads."
-          - "Managed the full product lifecycle including Material You UX design, secure local storage architecture, and open-source community translations."
+          - "Architected system-level digital wellbeing suite navigating strict Android background execution limits and battery optimization constraints to maintain reliable per-app tracking."
+          - "Solved severe Android **OEM fragmentation** by engineering centralized UsageCalculator normalizing telemetry across diverse manufacturer implementations (MIUI, OneUI, etc.)."
+          - "Implemented context-aware notification routing via Accessibility/Notification Listener services with complex time-boundary tracking for overnight routines."
 
     skills:
       - label: "Languages"
-        details: "Kotlin, Java, Python, TypeScript, JVM Bytecode, DEX/ART"
+        details: "Kotlin, Java, Python, TypeScript, C, JVM Bytecode, DEX/ART"
       - label: "Compiler & Toolchain"
-        details: "OpenJDK, Kotlin, ART, LSP, Gradle, R8/D8, Hidden API Bypass"
+        details: "OpenJDK, Kotlin, ART, LSP, Gradle, R8/D8, Hidden API Bypass, ELF/PTY"
       - label: "Backend & AI Infrastructure"
-        details: "Ktor, Neo4j (Cypher/Vector), GraphRAG, LLM Agents, FSRS, Mistral/Cohere APIs"
+        details: "Ktor, Neo4j (GraphRAG/Cypher), GraphRAG, FSRS v4, LLM Agents**, Koog Framework, Mistral/Cohere/Gemini APIs, SSE Streaming"
       - label: "Mobile & Platforms"
         details: "Android SDK, Jetpack Compose, Kotlin Multiplatform (KMP), Material You, F-Droid"
+      - label: "Systems Programming"
+        details: "glibc, Dynamic Linking, LD_PRELOAD, Process Virtualization, Custom Linkers, Recursive Sandboxing"
 
 design:
   theme: classic
@@ -100,7 +113,7 @@ design:
       name: 24pt
       headline: 10pt
       connections: 10pt
-      section_titles: 1.3em # Reduced from 1.4em
+      section_titles: 1.3em
     small_caps:
       name: false
       headline: false
@@ -112,8 +125,8 @@ design:
       connections: false
       section_titles: false
   links:
-    underline: false
-    show_external_link_icon: false
+    underline: true
+    show_external_link_icon: true
   header:
     alignment: center
     space_below_name: 0.4cm
@@ -130,10 +143,10 @@ design:
     type: with_partial_line
     line_thickness: 0.5pt
     space_above: 0.3cm
-    space_below: 0.4cm
+    space_below: 0.58cm
   sections:
     allow_page_break: true
-    space_between_regular_entries: 0.5em # Reduced from 0.8em
+    space_between_regular_entries: 0.5em
     space_between_text_based_entries: 0.2em
     show_time_spans_in:
       - experience
@@ -152,7 +165,7 @@ design:
       nested_bullet: •
       space_left: 0.15cm
       space_above: 0cm
-      space_between_items: 0.1em # Added slight spacing for readability
+      space_between_items: 0.1em
       space_between_bullet_and_text: 0.4em
   templates:
     footer: ''
