@@ -1,21 +1,6 @@
 <h1 align="center">Pranav Purwar (invoke)</h1>
 
-<p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=229C43&center=true&vCenter=true&width=500&lines=Fullstack+Web+%26+Android+Engineer;Ktor+%E2%80%A2+Kotlin+%E2%80%A2+TS+%E2%80%A2+Vue;Reverse+Engineering+%26+Systems;100k%2B+Users+Across+Open+Source" />
-  </a>
-</p>
-
 ---
-
-### Core Projects
-* **[ReConnect](https://github.com/PranavPurwar/ReConnect)**: Stay close to people who matter by capturing memories and staying in touch.
-* **[Sketchware Pro](https://github.com/Sketchware-Pro)**: Core Team; integrated R8/D8, optimized dependency resolution, and K2 compiler.
-* **[App Lock](https://github.com/aload0/AppLock)**: Protect sensitive apps on your device.
-* **[Cosmic IDE](https://github.com/Cosmic-IDE)**: IDE for Java/Kotlin on Android devices.
-* **[Reef](https://github.com/aload0/Reef)**: Stay focused, block distracting apps, and gain screen time insights with total privacy.
-
-### Technologies
 
 **Languages**  
 
